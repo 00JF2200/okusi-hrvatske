@@ -98,7 +98,7 @@ const T = {
 
 /* ── CITIES ── */
 const CITIES = [
-  { id: "split",     name: "Split",     flag: "🌊", target: 150, region: "Dalmacija" },
+  { id: "split",     name: "Split",     flag: "🌊", target: 4, region: "Dalmacija" },
   { id: "zagreb",    name: "Zagreb",    flag: "🏙", target: 250, region: "Hrvatska"  },
   { id: "dubrovnik", name: "Dubrovnik", flag: "🏰", target: 70,  region: "Dalmacija" },
   { id: "hvar",      name: "Hvar",      flag: "⛵", target: 50,  region: "Dalmacija" },
@@ -109,7 +109,7 @@ const CITIES = [
   { id: "pula",      name: "Pula",      flag: "🏟", target: 55,  region: "Istra"     },
 ];
 
-const BATCH = 20;
+const BATCH = 2;
 
 /* ── AI HELPERS ── */
 async function callClaude(body) {
