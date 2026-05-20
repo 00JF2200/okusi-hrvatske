@@ -116,7 +116,7 @@ async function callClaude(body) {
   const resp = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-body:body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 8000, ...body }),
+body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 8000, ...body }),
   });
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
