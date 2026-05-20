@@ -310,7 +310,7 @@ export default function App() {
   }, [lang]);
 
   const cd        = cityData[city] || { restaurants: [], loading: false, done: false, error: null };
-  const allRests  = cd.restaurants;
+  const allRests = Array.isArray(cd.restaurants) ? cd.restaurants : [];
   const isLoading = cd.loading;
   const isDone    = cd.done;
   const hasError  = cd.error;
