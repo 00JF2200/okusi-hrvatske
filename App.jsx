@@ -319,7 +319,7 @@ export default function App() {
   const priceKeyMap = { budget: 1, mid: 2, upscale: 3, luxury: 4 };
   const filtered = allRests.filter(r => {
     const s = search.toLowerCase();
-    const ok_search  = !s || r.name.toLowerCase().includes(s) || (r.highlight || "").toLowerCase().includes(s) || (r.tags || []).some(t => t.toLowerCase().includes(s));
+    const ok_search = !s || (r.name || "").toLowerCase().includes(s) || (r.highlight || "").toLowerCase().includes(s) || (Array.isArray(r.tags) ? r.tags : []).some(tag => String(tag).toLowerCase().includes(s));
     const ok_cat     = category === "sve" || r.category === category;
     const ok_price   = price === "sve" || r.price === priceKeyMap[price];
     const ok_local   = !localOnly || r.localScore >= 85;
