@@ -5,7 +5,9 @@ import { useState, useEffect, useCallback, useRef } from "react";
    API ključ se nikad ne vidi u browseru!
 ───────────────────────────────────────────────────── */
 const API_URL = "/api/claude";
-
+window.addEventListener("error", (e) => {
+  document.body.innerHTML = "<pre style='color:red;background:white;padding:20px;font-size:14px;white-space:pre-wrap'>" + e.message + "</pre>";
+});
 /* ── TRANSLATIONS ── */
 const T = {
   HR: {
